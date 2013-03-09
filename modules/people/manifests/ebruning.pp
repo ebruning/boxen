@@ -8,8 +8,18 @@ class people::ebruning {
 	include zsh
 	include onepassword
 	include handbrake
+	include java
+	include spotify
+
+	class { 'intellij':
+  	edition => 'ultimate',
+	}
+
+	#heroku::plugin { 'accounts':
+  #		source => 'ddollar/heroku-accounts'
+	#}
+
 	#include vlc
-	#include heroku
 	#include istatmenus4
 
 }
