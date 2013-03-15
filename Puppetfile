@@ -54,6 +54,7 @@ github "cyberduck",             "1.0.0"
 github "crashplan",             "1.0.1"
 github "spotify",               "1.0.0"
 github "magican",               "1.0.1"
+github "vim",			"1.0.2"
 #github "github_for_mac",       "1.0.0",    :repo => "kevinSuttle/puppet-github_for_mac"
 #github "launchbar",            "1.0.0",    :repo => "LudereSolutions/puppet-launchbar."
 

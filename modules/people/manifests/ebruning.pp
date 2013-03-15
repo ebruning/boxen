@@ -12,6 +12,7 @@ class people::ebruning {
     include spotify
     include mailplane::stable
     include cyberduck
+    include vim
 
     class { 'intellij':
     edition => 'ultimate',
