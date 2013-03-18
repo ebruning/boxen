@@ -13,6 +13,7 @@ class people::ebruning {
     include mailplane::stable
     include cyberduck
     include vim
+    include firefox
 
     class { 'intellij':
     edition => 'ultimate',
