@@ -1,29 +1,45 @@
 class people::ebruning {
-    include dropbox
-    include adium
-    include chrome
-    include sublime_text_2
-    include mou
-    include iterm2::stable
-    include zsh
-    include onepassword
-    include handbrake
-    include java
-    include spotify
-    include mailplane::stable
-    include cyberduck
-    include vim
-    include firefox
+  notice ( "Bootstrapping for ${::luser}" )
 
-    class { 'intellij':
+  include dropbox
+  include adium
+  include chrome
+  include sublime_text_2
+  include mou
+  include iterm2::stable
+  include zsh
+  include onepassword
+  include handbrake
+  include java
+  include spotify
+  include cyberduck
+  include vim
+  include firefox
+
+  class { 'intellij':
     edition => 'ultimate',
+  }
+
+  notify { "Installing specific applications for ${::hostname}": }  
+  case $::hostname {
+    'ebruning-imac': {
+      include crashplan
+      include mailplane::beta
     }
+    
+    'ebruning-mbp': { 
+      include mailplane::stable   
+      include xquartz  
+    }
+    
+    default: {
+      notify { "Error: Unknown hostname": }
+    }
+  }
 
-    #heroku::plugin { 'accounts':
-        #source => 'ddollar/heroku-accounts'
-    #}
-
-    #include vlc
-    #include istatmenus4
-    #include github_for_mac
+  # TODO: Get these working  
+  #include launchbar
+  #include vlc
+  #include istatmenus4
+  #include github_for_mac
 }
