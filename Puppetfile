@@ -13,14 +13,14 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "1.2.0"
+github "boxen", "1.3.0"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
 github "gcc",           "1.0.0"
 github "git",           "1.1.0"
-github "homebrew",      "1.1.0"
+github "homebrew",      "1.1.2"
 github "hub",           "1.0.0"
 github "inifile",       "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
 github "ruby",          "3.1.0"
@@ -41,7 +41,7 @@ github "adium",                 "1.0.1"
 github "chrome",                "1.1.0" 
 github "sublime_text_2",        "1.1.0"
 github "mou",                   "1.0.0"
-github "iterm2",                "1.0.2"
+github "iterm2",                "1.0.1"
 github "zsh",                   "1.0.0"
 github "onepassword",           "1.0.0"
 github "handbrake",             "1.0.0"
@@ -57,9 +57,11 @@ github "magican",               "1.0.1"
 github "vim",			        "1.0.2"
 github "virtualbox",            "1.0.1"
 github "firefox",               "1.0.3"
+github "crashplan",				"1.0.1"
+github "xquartz", 				"1.1.0"
 
 #github "github_for_mac",       "1.0.0",    :repo => "kevinSuttle/puppet-github_for_mac"
-#github "launchbar",            "1.0.0",    :repo => "LudereSolutions/puppet-launchbar."
+github "launchbar",            "1.0.0",    :repo => "LudereSolutions/puppet-launchbar"
 
 #github "vlc",                  "1.1.0"
 #github "istatmenus4",          "1.0.0",    :repo => "LudereSolutions/puppet-istatmenus4"
