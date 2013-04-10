@@ -61,4 +61,5 @@ github "virtualbox",            "1.0.1"
 github "crashplan",				"1.0.1"
 github "launchbar",             "1.0.0",    :repo => "LudereSolutions/puppet-launchbar"
 github "istatmenus4",           "1.0.0"
+github "secondbar",				"1.0.1"
  

@@ -59,6 +59,9 @@ class people::ebruning {
 
       notice ("Installing XQuartz")
       include xquartz  
+
+      notice ("Installing Secondbar")
+      include secondbar  
     }
     
     default: {

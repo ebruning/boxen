@@ -114,6 +114,11 @@ GITHUBTARBALL
     ruby (3.3.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-secondbar
+  specs:
+    secondbar (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-slate
   specs:
     slate (1.0.0)
@@ -189,6 +194,7 @@ DEPENDENCIES
   onepassword (= 1.0.0)
   osx (= 1.0.0)
   ruby (= 3.3.1)
+  secondbar (= 1.0.1)
   slate (= 1.0.0)
   spotify (= 1.0.0)
   stdlib (= 3.0.0)
