@@ -70,8 +70,8 @@ class people::ebruning {
   }
 
   # TODO: Get these working  
-  #include launchbar
-  #include vlc
-  #include istatmenus4
-  #include github_for_mac
+#  include launchbar
+  include vlc
+  include istatmenus4
+#  include github_for_mac
 }
