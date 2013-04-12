@@ -19,6 +19,11 @@ GITHUBTARBALL
     crashplan (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-ctags
+  specs:
+    ctags (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-cyberduck
   specs:
     cyberduck (1.0.0)
@@ -42,6 +47,11 @@ GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
     git (1.2.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-github_for_mac
+  specs:
+    github_for_mac (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-handbrake
@@ -87,6 +97,11 @@ GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
     java (1.0.6)
+
+GITHUBTARBALL
+  remote: boxen/puppet-macvim
+  specs:
+    macvim (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-magican
@@ -149,6 +164,11 @@ GITHUBTARBALL
     virtualbox (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-vlc
+  specs:
+    vlc (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -173,11 +193,13 @@ DEPENDENCIES
   chrome (= 1.1.0)
   crashplan (= 1.0.1)
   crashplan (= 1.0.1)
+  ctags (= 1.0.0)
   cyberduck (= 1.0.0)
   dropbox (= 1.1.0)
   firefox (= 1.0.5)
   gcc (= 1.0.0)
   git (= 1.2.2)
+  github_for_mac (= 1.0.1)
   handbrake (= 1.0.0)
   heroku (= 1.0.0)
   hipchat (= 1.0.1)
@@ -189,6 +211,7 @@ DEPENDENCIES
   iterm2 (= 1.0.1)
   java (= 1.0.6)
   launchbar (= 1.0.0)
+  macvim (= 1.0.0)
   magican (= 1.0.1)
   mou (= 1.0.0)
   onepassword (= 1.0.0)
@@ -202,6 +225,7 @@ DEPENDENCIES
   sudo (= 1.0.0)
   vim (= 1.0.2)
   virtualbox (= 1.0.1)
+  vlc (= 1.0.0)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)
 

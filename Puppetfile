@@ -28,17 +28,18 @@ github "ruby",          "3.3.1"
 github "stdlib",        "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",          "1.0.0"
      
-
 ## System
-github "osx",                   "1.0.0"
-github "zsh",                   "1.0.0"
-github "xquartz", 				"1.1.0"
+github "osx",           "1.0.0"
+github "zsh",           "1.0.0"
+github "xquartz",     	"1.1.0"
 
 ## Programming
 github "sublime_text_2",        "1.1.0"
 github "java",                  "1.0.6"
 github "heroku",                "1.0.0"
 github "intellij",              "1.1.3"
+github "ctags",			            "1.0.0"
+github "github_for_mac",        "1.0.1"
 
 ## Browsers
 github "chrome",                "1.1.0" 
@@ -56,10 +57,10 @@ github "cyberduck",             "1.0.0"
 github "crashplan",             "1.0.1"
 github "spotify",               "1.0.0"
 github "magican",               "1.0.1"
-github "vim",			        "1.0.2"
+github "vim",		                "1.0.2"
 github "virtualbox",            "1.0.1"
-github "crashplan",				"1.0.1"
-github "launchbar",             "1.0.0",    :repo => "LudereSolutions/puppet-launchbar"
+github "crashplan",		          "1.0.1"
 github "istatmenus4",           "1.0.0"
-github "secondbar",				"1.0.1"
- 
+github "secondbar",		          "1.0.1"
+github "macvim",		            "1.0.0" 
+github "vlc",			              "1.0.0" 
