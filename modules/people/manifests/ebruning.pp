@@ -1,7 +1,16 @@
-class people::ebruning {
-  notice ("Bootstrapping for ${::luser}")
+################################################################################
+# Personal manifest file
+# 
+# TODO: Add symlinking for dotfiles
+################################################################################
 
-  notice ("Default packages")
+class people::ebruning {
+
+  $home = "/Users/${::luser}"
+  $dotfiles = "${home}/dotfiles"
+
+  notice ("Bootstrapping for ${::luser}")
+  notice ("Installing default packages")
   include dropbox
   include chrome
   include sublime_text_2
@@ -18,6 +27,7 @@ class people::ebruning {
   include vlc
   include istatmenus4
   include github_for_mac
+  include transmit
   class { 'intellij':
     edition => 'ultimate',
   }
@@ -38,5 +48,10 @@ class people::ebruning {
     default: {
       notice ("Unknown hostname")
     }
+  }
+
+  # Download dotfiles
+  repository { $dotfiles:
+    source => 'ebruning/dotfiles'
   }
 }
