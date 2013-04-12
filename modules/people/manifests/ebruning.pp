@@ -50,6 +50,11 @@ class people::ebruning {
     }
   }
 
+  # Configure git
+  git::config::global { 'user.email':
+    value  => 'ebruning@gmail.com'
+  }
+
   # Download dotfiles
   repository { $dotfiles:
     source => 'ebruning/dotfiles'
