@@ -52,7 +52,9 @@ class people::ebruning {
 
   # Configure git
   git::config::global { 'user.email':
-    value  => 'ebruning@gmail.com'
+    value  => 'ebruning@gmail.com';
+    'user.name':
+    value => 'Ethan Bruning'
   }
 
   # Download dotfiles
