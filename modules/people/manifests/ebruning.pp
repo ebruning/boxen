@@ -28,6 +28,8 @@ class people::ebruning {
   include istatmenus4
   include github_for_mac
   include transmit
+  include macvim
+  
   class { 'intellij':
     edition => 'ultimate',
   }
@@ -63,5 +65,14 @@ class people::ebruning {
   # Download dotfiles
   repository { $dotfiles:
     source => 'ebruning/dotfiles'
+  }
+  file { "${home}/.zshrc":
+    ensure => 'link',
+    target => "${dotfiles}/zshrc"
+  }
+
+  file { "${home}/.vimrc":
+    ensure => 'link',
+    target => "${dotfiles}/vimrc"
   }
 }
