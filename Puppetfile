@@ -38,7 +38,7 @@ github "sublime_text_2",        "1.1.0"
 github "java",                  "1.0.6"
 github "heroku",                "1.0.0"
 github "intellij",              "1.1.3"
-github "ctags",			            "1.0.0"
+github "ctags",                 "1.0.0"
 github "github_for_mac",        "1.0.1"
 
 ## Browsers
