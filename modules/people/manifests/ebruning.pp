@@ -29,7 +29,6 @@ class people::ebruning {
   include github_for_mac
   include transmit
   include macvim
-  include reflector
   
   class { 'intellij':
     edition => 'ultimate',
@@ -45,7 +44,8 @@ class people::ebruning {
     'ebruning-mbp': { 
       include mailplane::stable   
       include xquartz  
-      include secondbar  
+      include secondbar
+      include reflector  
     }
     
     default: {
