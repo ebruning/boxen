@@ -29,6 +29,7 @@ class people::ebruning {
   include github_for_mac
   include transmit
   include macvim
+  include reflector
   
   class { 'intellij':
     edition => 'ultimate',

@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: LudereSolutions/puppet-reflector
+  specs:
+    reflector (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (1.3.0)
@@ -215,6 +220,7 @@ DEPENDENCIES
   mou (= 1.0.0)
   onepassword (= 1.0.0)
   osx (= 1.0.0)
+  reflector (= 1.0.0)
   ruby (= 3.3.1)
   secondbar (= 1.0.1)
   slate (= 1.0.0)

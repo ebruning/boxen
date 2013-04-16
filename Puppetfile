@@ -65,3 +65,5 @@ github "secondbar",             "1.0.1"
 github "macvim",                "1.0.0" 
 github "vlc",                   "1.0.0" 
 github "transmit",              "1.0.0"
+
+github "reflector",             "1.0.0", :repo => "LudereSolutions/puppet-reflector"
