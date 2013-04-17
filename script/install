@@ -1,0 +1,97 @@
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+
+################################################################################
+# Installs Boxen      
+# Assumes that Xcode and the command line tools are installed
+# Used the homebrew install script as a template     
+#
+# TODO: Message about sudo and prompt                                                                   
+################################################################################
+
+BOXEN_PREFIX = '/opt/boxen'
+
+# System calls
+def sudo *args
+  args = if args.length > 1
+    args.unshift "/usr/bin/sudo"
+  else
+    "/usr/bin/sudo #{args.first}"
+  end
+  system *args
+end
+
+def getc  # NOTE only tested on OS X
+  system "/bin/stty raw -echo"
+  if RUBY_VERSION >= '1.8.7'
+    STDIN.getbyte
+  else
+    STDIN.getc
+  end
+  ensure
+    system "/bin/stty -raw echo"
+end
+
+def git
+  @git ||= if ENV['GIT'] and File.executable? ENV['GIT']
+    ENV['GIT']
+  elsif Kernel.system '/usr/bin/which -s git'
+    'git'
+  else
+    s = `xcrun -find git 2>/dev/null`.chomp
+    s if $? and not s.empty?
+  end
+end
+
+def macos_version
+  @macos_version ||= /(10\.\d+)(\.\d+)?/.match(`/usr/bin/sw_vers -productVersion`).captures.first.to_f
+end
+
+def ask(*args)
+    print(*args)
+    gets
+end
+
+## System tests
+abort "MacOS too old, only supports 10.8" if macos_version < 10.8
+abort "Don't run this as root!" if Process.uid == 0
+abort <<-EOABORT unless Dir["#{BOXEN_PREFIX}/*"].empty?
+It appears Boxen is already installed. You should remove the Boxen folder first.
+EOABORT
+
+## Set hostname
+HOSTNAME = ask "Set hostname: "
+sudo "scutil --set ComputerName #{HOSTNAME}"
+sudo "scutil --set LocalHostName #{HOSTNAME}"
+sudo "scutil --set HostName #{HOSTNAME}"
+
+## Show the Library folder
+system "chflags nohidden ~/Library/"
+
+## Install 
+puts "This script will install Boxen to #{BOXEN_PREFIX}"
+puts ""
+puts "Creating #{BOXEN_PREFIX}"
+sudo "/bin/mkdir -p #{BOXEN_PREFIX}"
+sudo "/usr/sbin/chown ${USER}:admin /opt/boxen"
+
+puts "Installing Boxen"
+Dir.chdir BOXEN_PREFIX do
+  if git
+    system git, "clone", "git://github.com/ebruning/boxen.git", "repo"
+  else
+    abort "Unable to find git"
+  end
+end
+
+# Run Boxen
+Dir.chdir File.join(BOXEN_PREFIX, "repo") do
+  system "script/boxen"
+end
+
+
+
+
+
+
+
+
