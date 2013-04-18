@@ -39,6 +39,7 @@ class people::ebruning {
     'ebruning-imac': {
       include crashplan
       include mailplane::beta
+      include appcode
     }
     
     'ebruning-mbp': { 
