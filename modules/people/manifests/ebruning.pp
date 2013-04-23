@@ -68,6 +68,7 @@ class people::ebruning {
   repository { $dotfiles:
     source => 'ebruning/dotfiles'
   }
+  
   file { "${home}/.zshrc":
     ensure => 'link',
     target => "${dotfiles}/zshrc"
@@ -76,5 +77,13 @@ class people::ebruning {
   file { "${home}/.vimrc":
     ensure => 'link',
     target => "${dotfiles}/vimrc"
+  }
+
+  # Create and copy themes for Xcode
+  file { "${home}/Library/Developer/Xcode/UserData/FontAndColorThemes":
+    ensure => "directory",
+    owner  => "ebruning",
+    group  => "staff",
+    mode   => 750,
   }
 }
