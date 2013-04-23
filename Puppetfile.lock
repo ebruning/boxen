@@ -126,7 +126,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
-    osx (1.0.0)
+    osx (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-ruby
@@ -225,7 +225,7 @@ DEPENDENCIES
   magican (= 1.0.1)
   mou (= 1.0.0)
   onepassword (= 1.0.0)
-  osx (= 1.0.0)
+  osx (= 1.1.0)
   reflector (= 1.0.0)
   ruby (= 3.3.1)
   secondbar (= 1.0.1)

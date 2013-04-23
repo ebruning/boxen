@@ -29,7 +29,7 @@ github "stdlib",        "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",          "1.0.0"
      
 ## System
-github "osx",           "1.0.0"
+github "osx",           "1.1.0"
 github "zsh",           "1.0.0"
 github "xquartz",     	"1.1.0"
 
