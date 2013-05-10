@@ -9,51 +9,23 @@ class people::ebruning {
   $home = "/Users/${::luser}"
   $dotfiles = "${home}/dotfiles"
 
+  osx_chsh { $::luser:
+    shell => '/opt/boxen/homebrew/bin/zsh',
+    require => Package['zsh'],
+  }
+
+  file_line { 'add zsh to /etc/shells':
+    path    => '/etc/shells',
+    line    => "${boxen::config::homebrewdir}/bin/zsh",
+    require => Package['zsh'],
+  }
+
   notice ("Bootstrapping for ${::luser}")
   notice ("Installing default packages")
-  include dropbox
-  include chrome
-  include sublime_text_2
-  include mou
-  include iterm2::stable
-  include zsh
-  include onepassword
-  include handbrake
-  include java
-  include spotify
-  include vim
-  include firefox
-  include ctags 
-  include vlc
-  include istatmenus4
-  include github_for_mac
-  include transmit
-  include macvim
-  
-  class { 'intellij':
-    edition => 'ultimate',
-  }
 
-  notice ("Installing specific applications for ${::hostname}")  
-  case $::hostname {
-    'ebruning-imac': {
-      include crashplan
-      include mailplane::beta
-      include appcode
-    }
-    
-    'ebruning-mbp': { 
-      include mailplane::stable   
-      include xquartz  
-      include secondbar
-      include reflector  
-    }
-    
-    default: {
-      notice ("Unknown hostname")
-    }
-  }
-
+  include people::ebruning::applications
+  include people::ebruning::development
+ 
   # Configure git
   git::config::global { 
     'user.email':
