@@ -65,6 +65,6 @@ github "secondbar",             "1.0.1"
 github "macvim",                "1.0.0" 
 github "vlc",                   "1.0.0" 
 github "transmit",              "1.0.0"
-
+github "better_touch_tools",    "1.0.0"
 github "reflector",             "1.0.0", :repo => "LudereSolutions/puppet-reflector"
 github "appcode",               "0.0.1", :repo => "LudereSolutions/puppet-appcode"

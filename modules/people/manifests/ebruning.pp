@@ -29,6 +29,7 @@ class people::ebruning {
   include github_for_mac
   include transmit
   include macvim
+  include beter_touch_tools
   
   class { 'intellij':
     edition => 'ultimate',
