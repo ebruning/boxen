@@ -30,7 +30,7 @@ class people::ebruning {
   include github_for_mac
   include transmit
   include macvim
-  include beter_touch_tools
+#  include better_touch_tools
   
   class { 'intellij':
     edition => 'ultimate',
@@ -67,9 +67,13 @@ class people::ebruning {
   }
 
   # Download dotfiles
-  repository { 
-    $dotfiles:
-    source => 'ebruning/dotfiles'
+  repository {
+    'Personal Dot files': 
+    path    => $dotfiles,
+    source  => 'ebruning/dotfiles';
+    'oh-my-zsh':
+    path    => "${dotfiles}/oh-my-zsh",
+    source  => "https://github.com/robbyrussell/oh-my-zsh.git"
   }
 
   file { "${home}/.zshrc":
