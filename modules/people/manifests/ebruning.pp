@@ -104,6 +104,11 @@ class people::ebruning {
       path      => "${vim_bundles}/vim-easytags",
       source    => 'xolox/vim-easytags',
       provider  => 'git';
+    # Required my vim-easytags
+    'vim-misc':   
+      path      => "${vim_bundles}/vim-misc",
+      source    => 'xolox/vim-misc',
+      provider  => 'git';
     'vim-fugitive':
       path      => "${vim_bundles}/vim-fugitive",
       source    => 'tpope/vim-fugitive',
