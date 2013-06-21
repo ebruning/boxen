@@ -92,6 +92,10 @@ class people::ebruning {
       path      => "${vim_bundles}/vim-ios",
       source    => 'eraserhd/vim-ios',
       provider  => 'git';
+    'vim-objc':
+      path      => "${vim_bundles}/vim-objc",
+      source    => 'b4winckler/vim-objc',
+      provider  => 'git';
     'vim-kiwi':
       path      => "${vim_bundles}/vim-kiwi",
       source    => 'eraserhd/vim-kiwi',
