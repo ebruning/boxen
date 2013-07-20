@@ -96,9 +96,9 @@ class people::ebruning {
       path      => "${vim_bundles}/nerdtree",
       source    => 'scrooloose/nerdtree',
       provider  => 'git';
-    'vim-easytags':
-      path      => "${vim_bundles}/vim-easytags",
-      source    => 'xolox/vim-easytags',
+    'YouCompleteMe':
+      path      => "${vim_bundles}/YouCompleteMe",
+      source    => 'Valloric/YouCompleteMe',
       provider  => 'git';
     'vim-fugitive':
       path      => "${vim_bundles}/vim-fugitive",
@@ -108,9 +108,9 @@ class people::ebruning {
       path      => "${vim_bundles}/vim-rake",
       source    => 'tpope/vim-rake',
       provider  => 'git';
-    'vim-commentary':
-      path      => "${vim_bundles}/vim-commentary",
-      source    => 'tpope/vim-commentary',
+    'nerdcommenter':
+      path      => "${vim_bundles}/nerdcommenter",
+      source    => 'scrooloose/nerdcommenter',
       provider  => 'git';
     'vim-bundler':
       path      => "${vim_bundles}/vim-bundler",
@@ -119,6 +119,10 @@ class people::ebruning {
     'tabular':
       path      => "${vim_bundles}/tabular",
       source    => 'godlygeek/tabular',
+      provider  => 'git';
+    'airline':
+      path      => "${vim_bundles/vim-airline",
+      source    => "bling/vim-airline",
       provider  => 'git'
   }
 
