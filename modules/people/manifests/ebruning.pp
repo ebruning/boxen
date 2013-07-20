@@ -30,7 +30,7 @@ class people::ebruning {
   include github_for_mac
   include transmit
   include macvim
-  include beter_touch_tools
+#  include better_touch_tools
   
   class { 'intellij':
     edition => 'ultimate',
@@ -67,9 +67,13 @@ class people::ebruning {
   }
 
   # Download dotfiles
-  repository { 
-    $dotfiles:
-    source => 'ebruning/dotfiles'
+  repository {
+    'Personal Dot files': 
+    path    => $dotfiles,
+    source  => 'ebruning/dotfiles';
+    'oh-my-zsh':
+    path    => "${dotfiles}/oh-my-zsh",
+    source  => "https://github.com/robbyrussell/oh-my-zsh.git"
   }
 
   file { "${home}/.zshrc":
@@ -88,6 +92,10 @@ class people::ebruning {
       path      => "${vim_bundles}/vim-ios",
       source    => 'eraserhd/vim-ios',
       provider  => 'git';
+    'vim-objc':
+      path      => "${vim_bundles}/vim-objc",
+      source    => 'b4winckler/vim-objc',
+      provider  => 'git';
     'vim-kiwi':
       path      => "${vim_bundles}/vim-kiwi",
       source    => 'eraserhd/vim-kiwi',
@@ -99,6 +107,11 @@ class people::ebruning {
     'YouCompleteMe':
       path      => "${vim_bundles}/YouCompleteMe",
       source    => 'Valloric/YouCompleteMe',
+      provider  => 'git';
+    # Required my vim-easytags
+    'vim-misc':   
+      path      => "${vim_bundles}/vim-misc",
+      source    => 'xolox/vim-misc',
       provider  => 'git';
     'vim-fugitive':
       path      => "${vim_bundles}/vim-fugitive",
